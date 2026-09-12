@@ -1,0 +1,68 @@
+name: Bug report
+description: Document a reproducible software defect
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a problem. Please remove sensitive information before submitting evidence.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include version, environment, browser/device, operating system and user role.
+    validations:
+      required: true
+  - type: textarea
+    id: preconditions
+    attributes:
+      label: Preconditions
+      description: What state is required before the first step?
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide the shortest reliable sequence.
+      placeholder: |
+        1. Open...
+        2. Select...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact and evidence
+      description: Explain who is affected and attach sanitized screenshots, video, logs or requests.
+    validations:
+      required: true
+  - type: textarea
+    id: retest
+    attributes:
+      label: Retest considerations
+      description: List boundaries and related regression areas.
